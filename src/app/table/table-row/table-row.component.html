@@ -1,1 +1,13 @@
-<p>table-row works!</p>
+<div class="table-custom" (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()">
+    <td class="column-custom">{{task.taskName}}</td>
+    <td class="column-custom">{{priorityName(task.priority)}}</td>
+    <td class="column-custom">
+        <input type="checkbox" class="regular-checkbox" id="exampleCheck1" [checked]="task.done"
+               (change)="checkboxChange($event)">
+    </td>
+    <td class="column-custom">
+        <button class="custom-btn" mat-fab color="primary" *ngIf="deleteButtonVisible" (click)="onDelete()">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </td>
+</div>

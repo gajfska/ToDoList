@@ -1,0 +1,53 @@
+.table-custom  {
+    display: contents;
+}
+
+.column-custom {
+    width: 25% !important;
+    height: 60px;
+    padding: 0 10px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.custom-btn {
+    width: 38px;
+    height: 38px;
+    line-height: 14px;
+    font-size: 25px;
+    background-color: #c76701;
+}
+
+.custom-btn::ng-deep .mat-button-wrapper {
+    line-height: 14px;
+    padding: 0;
+}
+
+.custom-btn::ng-deep .mat-button-wrapper .mat-icon {
+    font-size: 23px;
+    padding-right: 4px;
+    padding-top: 1px;
+}
+
+.regular-checkbox {
+    -webkit-appearance: none;
+    border: 2px solid #cacece;
+    padding: 9px;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+}
+
+.regular-checkbox:checked {
+    background-color: #c76701;
+    border: 2px solid #c76701;
+}
+
+.regular-checkbox:checked:after {
+    content: '\2714';
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: white;
+}

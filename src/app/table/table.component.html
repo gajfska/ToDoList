@@ -1,1 +1,45 @@
-<p>table works!</p>
+<h4>Your Tasks</h4>
+<br>
+
+<div class="wrap-table">
+    <table class="table">
+        <tr class="table-header">
+            <th *ngFor="let header of displayedColumnsKeys" (click)="onSort(header)">
+                {{ headerName(header) }} {{ arrowSymbol(header) }}
+            </th>
+        </tr>
+
+        <tr class="table-row" *ngFor="let task of displayedTasks; let i = index">
+            <app-table-row class="table-line" [task]="task" [index]="i"></app-table-row>
+        </tr>
+
+    </table>
+
+    <div class="select-custom">
+        <p>Rows per page: </p>
+        <div class="item">
+            <mat-select
+                    [ngModel]="numberOfRowsToDisplay"
+                    [(value)]="numberOfRowsToDisplay"
+                    (selectionChange)="tasksPerPageChanged()">
+                <mat-option value=5>5</mat-option>
+                <mat-option value=10>10</mat-option>
+                <mat-option value=15>15</mat-option>
+            </mat-select>
+        </div>
+
+        <p>{{pageStart() + 1}} - {{pageEnd()}} of {{allAddedTasks.length}}</p>
+        <div>
+            <button class="mat-flat-button" (click)="goToPreviousPage()">
+                <mat-icon>keyboard_arrow_left</mat-icon>
+            </button>
+
+        </div>
+        <div>
+            <button class="mat-flat-button" (click)="goToNextPage()">
+                <mat-icon>keyboard_arrow_right</mat-icon>
+            </button>
+        </div>
+    </div>
+
+</div>

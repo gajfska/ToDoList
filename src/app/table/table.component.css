@@ -1,0 +1,54 @@
+.wrap-table {
+    box-shadow: 0 0 0 1em dimgray;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    background-color: #59411b;
+}
+
+
+.table-header {
+    user-select: none;
+    height: 60px;
+
+}
+
+.table-header th {
+    padding: 0 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.table-line  {
+    display: contents;
+}
+
+.select-custom{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.item {
+    width: 60px;
+}
+
+::ng-deep .mat-form-field-infix {
+    width: 60px;
+}
+
+.select-custom p {
+    padding: 0 10px;
+}
+
+.table-row {
+    background-color: white;
+    border-bottom: 2px solid dimgray;
+}
+
+.table-row:hover {
+    background-color: whitesmoke;
+}
