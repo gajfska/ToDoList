@@ -7,6 +7,13 @@ import {MatSliderModule} from '@angular/material/slider';
 import { FormComponent } from './form/form.component';
 import { TableComponent } from './table/table.component';
 import { TableRowComponent } from './table/table-row/table-row.component';
+import {MatIconModule} from '@angular/material/icon';
+import {FormsModule} from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -18,7 +25,14 @@ import { TableRowComponent } from './table/table-row/table-row.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-      MatSliderModule
+      MatSliderModule,
+      MatIconModule,
+      MatTableModule,
+      MatPaginatorModule,
+      MatFormFieldModule,
+      MatInputModule,
+      MatSelectModule,
+      FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
